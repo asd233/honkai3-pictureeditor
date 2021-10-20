@@ -13,13 +13,14 @@
                  class="form-control"
                  style="display:inline;width:75%">
           <button class="btn btn-default"
-                  style="height:37px">
+                  style="height:34px;vertical-align: middle;">
             加载数据
           </button>
         </p>
       </div>
       <div>
-        <card></card>
+        <!-- 卡片组件 -->
+        <card @get="getCardType"></card>
       </div>
       <div class="option">
         <button class="btn btn-primary">
@@ -31,20 +32,30 @@
       </div>
 
     </div>
-    <div id="view"></div>
+    <div id="view">
+      <div id="img">
+
+      </div>
+    </div>
   </div>
 </template> 
 <script>
-import card from '../components/card.vue'
+import Card from '../components/Card'
 export default {
   name: "team",
   data() {
     return {
-      teamId: "9043,9044"
+      teamId: "9043,9044",
+      cardType: "title"
+    }
+  },
+  methods: {
+    getCardType(cardType) {
+      this.cardType = cardType;
     }
   },
   components: {
-    card,
+    Card,
   },
 }
 </script>
@@ -64,7 +75,7 @@ export default {
   &::-webkit-scrollbar {
     width: 0 !important;
   }
-  input {
+  > input {
     height: 37px;
     color: #b8a8b0;
   }
@@ -80,5 +91,8 @@ export default {
   width: 78%;
   height: 100vh;
   background-color: #1d2139;
+  > #img {
+    width: 1080px;
+  }
 }
 </style>
