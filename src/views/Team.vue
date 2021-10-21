@@ -34,19 +34,24 @@
     </div>
     <div id="view">
       <div id="img">
-
+        <component :is='"view"+cardType'></component>
       </div>
     </div>
   </div>
 </template> 
 <script>
 import Card from '../components/Card'
+// import viewTitle from '../components/teamView/viewTitle.vue'
+import viewBoss from '../components/teamView/viewBoss.vue'
+import viewTeam from '../components/teamView/viewTeam.vue'
+import viewLine from '../components/teamView/viewLine.vue'
+
 export default {
   name: "team",
   data() {
     return {
       teamId: "9043,9044",
-      cardType: "title"
+      cardType: "Boss"
     }
   },
   methods: {
@@ -56,6 +61,10 @@ export default {
   },
   components: {
     Card,
+    // viewTitle,
+    viewBoss,
+    viewTeam,
+    viewLine
   },
 }
 </script>
@@ -93,6 +102,7 @@ export default {
   background-color: #1d2139;
   > #img {
     width: 1080px;
+    background-color: #1d2139;
   }
 }
 </style>
