@@ -1,15 +1,40 @@
 <template>
   <div>
     <p>BOSS名称</p>
-    <input class="form-control"
-           type="text">
+    <select v-model="bossData.select"
+            class="form-control"
+            @change="pushBossData">
+      <option :value="bossPath.paths[i]"
+              v-for="(item,i) in bossPath.paths"
+              :key="i">
+        {{item.bossName}}
+      </option>
+    </select>
     <label>
-      <input type="checkbox">
+      <input type="checkbox"
+             v-model="bossData.tag">
       sss标志
     </label>
-    <p>图片资源</p>
-    <input class="form-control"
-           type="text">
-    <button class="btn btn-default">从素材库选择</button>
   </div>
 </template>
+<script>
+import bossPath from '../../assets/bosspath.json';
+
+export default {
+  name: "cardBoss",
+  data() {
+    return {
+      bossData: {
+        tag: false,
+        select: "",
+      },
+      bossPath: bossPath
+    }
+  },
+  methods: {
+    pushBossData() {
+      this.$emit("pushBossData", this.bossData);
+    }
+  }
+}
+</script>

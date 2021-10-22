@@ -7,20 +7,15 @@
             &lt;所有模板
           </router-link>
         </p>
-        <p>
-          <input type="text"
-                 v-model="teamId"
-                 class="form-control"
-                 style="display:inline;width:75%">
-          <button class="btn btn-default"
-                  style="height:34px;vertical-align: middle;">
-            加载数据
-          </button>
-        </p>
       </div>
       <div>
         <!-- 卡片组件 -->
-        <card @get="getCardType"></card>
+        <card @getCardType="getCardType"
+              @getBossData="getBossData"
+              v-for="(team,i) in card"
+              :index="i"
+              :key="i">
+        </card>
       </div>
       <div class="option">
         <button class="btn btn-primary">
@@ -34,14 +29,16 @@
     </div>
     <div id="view">
       <div id="img">
-        <component :is='"view"+cardType'></component>
+        <component :is='"view"+team.cardType'
+                   v-for="(team,i) in card"
+                   :key="i">
+        </component>
       </div>
     </div>
   </div>
 </template> 
 <script>
 import Card from '../components/Card'
-// import viewTitle from '../components/teamView/viewTitle.vue'
 import viewBoss from '../components/teamView/viewBoss.vue'
 import viewTeam from '../components/teamView/viewTeam.vue'
 import viewLine from '../components/teamView/viewLine.vue'
@@ -50,18 +47,28 @@ export default {
   name: "team",
   data() {
     return {
-      teamId: "9043,9044",
-      cardType: "Boss"
+      card: [
+        {
+          cardType: "Boss",
+          cardData: {}
+        },
+        {
+          cardType: "Boss",
+          cardData: {}
+        },
+      ],
     }
   },
   methods: {
-    getCardType(cardType) {
-      this.cardType = cardType;
+    getCardType(cardType, index) {
+      this.card[index].cardType = cardType;
+    },
+    getBossData(bossdata, index) {
+      this.card[index].cardData = bossdata;
     }
   },
   components: {
     Card,
-    // viewTitle,
     viewBoss,
     viewTeam,
     viewLine

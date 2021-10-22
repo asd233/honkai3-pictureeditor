@@ -11,7 +11,8 @@
       <option value="Line">分割线</option>
     </select>
 
-    <component :is='select'></component>
+    <component :is='select'
+               @pushBossData="transferBossData"></component>
   </div>
 </template>
 <script>
@@ -28,9 +29,15 @@ export default {
   },
   methods: {
     pushType() {
-      this.$emit("get", this.select);
-    }
+      this.$emit("getCardType", this.select, this.index);
+    },
+    transferBossData(bossData) {
+      this.$emit("getBossData", bossData, this.index);
+    },
   },
+  props: [
+    "index",
+  ],
   components: {
     Boss,
     Team
