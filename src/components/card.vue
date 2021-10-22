@@ -6,25 +6,24 @@
             form-control"
             @change="pushType"
             v-model="select">
-      <option value="cardTitle">标题</option>
-      <option value="boss">BOSS</option>
-      <option value="team">阵容</option>
-      <option value="line">分割线</option>
+      <option value="Boss">BOSS</option>
+      <option value="Team">阵容</option>
+      <option value="Line">分割线</option>
     </select>
 
-    <component v-bind:is='select'></component>
+    <component :is='select'></component>
   </div>
 </template>
 <script>
-import cardTitle from './card/cardTitle.vue'
-import boss from './card/boss.vue'
-import team from './card/team.vue'
+
+import Boss from './card/boss.vue'
+import Team from './card/team.vue'
 
 export default {
   name: "Card",
   data() {
     return {
-      select: "cardTitle"
+      select: "Boss"
     }
   },
   methods: {
@@ -33,9 +32,8 @@ export default {
     }
   },
   components: {
-    cardTitle,
-    boss,
-    team
+    Boss,
+    Team
   }
 }
 </script>
