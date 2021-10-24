@@ -19,10 +19,8 @@ a {
 }
 button {
   outline: none !important;
-  margin: 14px 0 !important;
   &:focus {
     outline: none !important;
-    background-color: #fff !important;
   }
 }
 label {
