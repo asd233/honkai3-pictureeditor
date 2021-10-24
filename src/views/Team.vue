@@ -12,13 +12,15 @@
         <!-- 卡片组件 -->
         <card @getCardType="getCardType"
               @getBossData="getBossData"
-              v-for="(team,i) in card"
+              @cardOption="cardOption"
+              v-for="(item,i) in card"
               :index="i"
-              :key="i">
+              :key="'card'+item.index">
         </card>
       </div>
       <div class="option">
-        <button class="btn btn-primary">
+        <button class="btn btn-primary"
+                @click="addCard">
           添加
         </button>
         <button class="btn btn-success">
@@ -29,9 +31,9 @@
     </div>
     <div id="view">
       <div id="img">
-        <component :is='"view"+team.cardType'
-                   v-for="(team,i) in card"
-                   :key="i">
+        <component :is='"view"+item.cardType'
+                   v-for="(item) in card"
+                   :key="'view'+item.index">
         </component>
       </div>
     </div>
@@ -43,6 +45,8 @@ import viewBoss from '../components/teamView/viewBoss.vue'
 import viewTeam from '../components/teamView/viewTeam.vue'
 import viewLine from '../components/teamView/viewLine.vue'
 
+let cardKey = 0;
+let viewKey = 0;
 export default {
   name: "team",
   data() {
@@ -50,21 +54,63 @@ export default {
       card: [
         {
           cardType: "Boss",
-          cardData: {}
+          cardData: {},
+          index: 0
         },
         {
           cardType: "Boss",
-          cardData: {}
+          cardData: {},
+          index: 1
         },
       ],
     }
   },
   methods: {
+    addCard() {
+      this.card.push({
+        cardType: "Boss",
+        cardData: {},
+        index: this.card.length
+      })
+    },
+    cardKeyIncrease() {
+      return cardKey++;
+    },
+    viewKeyIncrease() {
+      return viewKey++;
+    },
     getCardType(cardType, index) {
       this.card[index].cardType = cardType;
     },
     getBossData(bossdata, index) {
       this.card[index].cardData = bossdata;
+    },
+    cl(a) {
+      console.log(a);
+    },
+    cardOption(order, index) {
+      switch (order) {
+        case 1:
+          //上移
+          if (index != 0) {
+            let item = this.card[index - 1];
+            this.card.splice(index - 1, 1, this.card[index]);
+            this.card.splice(index, 1, item);
+          }
+          break;
+        case 0:
+          //删除
+          this.card.splice(index, 1)
+          break;
+        case -1:
+          //下移
+          if (index != this.card.length - 1) {
+            let item = this.card[index + 1];
+            this.card.splice(index + 1, 1, this.card[index]);
+            this.card.splice(index, 1, item);
+          }
+          break;
+      }
     }
   },
   components: {

@@ -13,6 +13,14 @@
 
     <component :is='select'
                @pushBossData="transferBossData"></component>
+    <div id="cardOption">
+      <button class="btn btn-default"
+              @click="cardOption(1)">上移</button>
+      <button class="btn btn-default"
+              @click="cardOption(-1)">下移</button>
+      <button class="btn btn-default"
+              @click="cardOption(0)">删除</button>
+    </div>
   </div>
 </template>
 <script>
@@ -34,6 +42,9 @@ export default {
     transferBossData(bossData) {
       this.$emit("getBossData", bossData, this.index);
     },
+    cardOption(order) {
+      this.$emit("cardOption", order, this.index);
+    }
   },
   props: [
     "index",
@@ -47,5 +58,13 @@ export default {
 <style lang="less">
 #card {
   margin: 20px 0;
+}
+#cardOption {
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-between;
+  > button {
+    width: 100px;
+  }
 }
 </style>

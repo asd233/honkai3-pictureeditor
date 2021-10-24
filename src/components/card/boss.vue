@@ -15,6 +15,7 @@
              v-model="bossData.tag">
       sss标志
     </label>
+
   </div>
 </template>
 <script>
