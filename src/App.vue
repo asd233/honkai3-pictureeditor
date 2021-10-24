@@ -24,6 +24,6 @@ button {
   }
 }
 label {
-  font-weight: 400;
+  font-weight: 400px;
 }
 </style>
