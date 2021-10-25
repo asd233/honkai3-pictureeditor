@@ -33,7 +33,8 @@
       <div id="img">
         <component :is='"view"+item.cardType'
                    v-for="(item) in card"
-                   :key="'view'+item.index">
+                   :key="'view'+item.index"
+                   :boss="card[item.index].cardData">
         </component>
       </div>
     </div>
@@ -54,12 +55,20 @@ export default {
       card: [
         {
           cardType: "Boss",
-          cardData: {},
+          cardData: {
+            select: {
+              bossName: ""
+            }
+          },
           index: 0
         },
         {
           cardType: "Boss",
-          cardData: {},
+          cardData: {
+            select: {
+              bossName: ""
+            }
+          },
           index: 1
         },
       ],
@@ -69,7 +78,11 @@ export default {
     addCard() {
       this.card.push({
         cardType: "Boss",
-        cardData: {},
+        cardData: {
+          select: {
+            bossName: ""
+          }
+        },
         index: this.card.length
       })
     },
@@ -124,7 +137,6 @@ export default {
 <style lang="less">
 #team {
   display: flex;
-  flex-direction: initial;
   text-align: left;
 }
 #sidebar {
