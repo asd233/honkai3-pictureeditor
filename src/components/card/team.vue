@@ -11,10 +11,11 @@
       NEW!标志
     </label>
 
-    <p>队长1</p>
+    <p>队长</p>
     <input class="form-control"
            type="text">
     <button class="btn btn-default">从素材库选择</button>
+    <roleSelect></roleSelect>
     <p>队员1</p>
     <input class="form-control"
            type="text">
@@ -29,3 +30,16 @@
     <button class="btn btn-default">从素材库选择</button>
   </div>
 </template>
+<script>
+import roleSelect from '../roleSelect.vue'
+export default {
+  data() {
+    return {
+
+    }
+  },
+  components: {
+    roleSelect
+  }
+}
+</script>
