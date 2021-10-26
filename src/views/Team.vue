@@ -23,7 +23,8 @@
                 @click="addCard">
           添加
         </button>
-        <button class="btn btn-success">
+        <button class="btn btn-success"
+                @click="ceratImage">
           生成图片
         </button>
       </div>
@@ -45,6 +46,7 @@ import Card from '../components/Card'
 import viewBoss from '../components/teamView/viewBoss.vue'
 import viewTeam from '../components/teamView/viewTeam.vue'
 import viewLine from '../components/teamView/viewLine.vue'
+import html2cavans from '../../node_modules/html2canvas/dist/html2canvas';
 
 let cardKey = 0;
 let viewKey = 0;
@@ -98,9 +100,6 @@ export default {
     getBossData(bossdata, index) {
       this.card[index].cardData = bossdata;
     },
-    cl(a) {
-      console.log(a);
-    },
     cardOption(order, index) {
       switch (order) {
         case 1:
@@ -124,6 +123,11 @@ export default {
           }
           break;
       }
+    },
+    ceratImage() {
+      html2cavans(document.getElementById("img"), { allowTaint: true }).then(canvas => {
+        document.body.appendChild(canvas)
+      });
     }
   },
   components: {
@@ -145,6 +149,7 @@ export default {
   overflow-y: scroll;
   color: #000;
   padding: 20px 25px 0px;
+  min-width: 400px;
   overflow: -moz-scrollbars-none;
   &::-webkit-scrollbar {
     width: 0 !important;
