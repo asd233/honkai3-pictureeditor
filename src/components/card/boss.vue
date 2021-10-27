@@ -12,7 +12,8 @@
     </select>
     <label>
       <input type="checkbox"
-             v-model="bossData.tag">
+             v-model="bossData.tag"
+             @change="pushBossData">
       sss标志
     </label>
 

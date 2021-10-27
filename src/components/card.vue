@@ -12,7 +12,9 @@
     </select>
 
     <component :is='select'
-               @pushBossData="transferBossData"></component>
+               @pushBossData="transferBossData"
+               @pushTeamData="transferTeamData">
+    </component>
     <div id="cardOption">
       <button class="btn btn-default"
               @click="cardOption(1)">上移</button>
@@ -41,6 +43,9 @@ export default {
     },
     transferBossData(bossData) {
       this.$emit("getBossData", bossData, this.index);
+    },
+    transferTeamData(teamData) {
+      this.$emit("getTeamData", teamData, this.index);
     },
     cardOption(order) {
       this.$emit("cardOption", order, this.index);

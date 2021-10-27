@@ -3,16 +3,17 @@
     <div id="role">
       <ul>
         <li v-for="(item,i) in roleData.role"
-            :key="i">
+            :key="i"
+            @click="selectRole(i)">
           {{item.roleName}}
         </li>
       </ul>
     </div>
     <div id="list">
       <div v-for="(item,i) in roleData.role[selectIndex].roleList"
-           :key="item.name+i">
-        <img :src="item.path"
-             alt="">
+           :key="item.name+i"
+           @click="selectArmor(item)">
+        <img :src="item.path">
         <span>{{item.name}}</span>
       </div>
     </div>
@@ -24,17 +25,21 @@ export default {
   data() {
     return {
       roleData: roleData,
-      selectIndex: 0
+      selectIndex: 0,
     }
   },
   methods: {
-    cl() {
-      console.log(this.roleData);
+    selectRole(index) {
+      this.selectIndex = index;
+    },
+    selectArmor(data) {
+      data["index"] = this.templateIndex;
+      this.$emit("pushTeamData", data);
     }
   },
-  created() {
-    this.cl();
-  },
+  props: [
+    "templateIndex"
+  ]
 }
 </script>
 <style lang="less">

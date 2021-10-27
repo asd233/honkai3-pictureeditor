@@ -1,5 +1,6 @@
 <template>
-  <div id="team">
+  <div id="team"
+       v-if="display">
     <div id="sidebar">
       <div class="top">
         <p>
@@ -12,6 +13,7 @@
         <!-- 卡片组件 -->
         <card @getCardType="getCardType"
               @getBossData="getBossData"
+              @getTeamData="getTeamData"
               @cardOption="cardOption"
               v-for="(item,i) in card"
               :index="i"
@@ -33,9 +35,9 @@
     <div id="view">
       <div id="img">
         <component :is='"view"+item.cardType'
-                   v-for="(item) in card"
+                   v-for="(item,i) in card"
                    :key="'view'+item.index"
-                   :boss="card[item.index].cardData">
+                   :boss="card[i].cardData">
         </component>
       </div>
     </div>
@@ -54,6 +56,7 @@ export default {
   name: "team",
   data() {
     return {
+      display: true,
       card: [
         {
           cardType: "Boss",
@@ -100,6 +103,9 @@ export default {
     getBossData(bossdata, index) {
       this.card[index].cardData = bossdata;
     },
+    getTeamData(teamdata, index) {
+      this.card[index].cardData = teamdata;
+    },
     cardOption(order, index) {
       switch (order) {
         case 1:
@@ -112,7 +118,7 @@ export default {
           break;
         case 0:
           //删除
-          this.card.splice(index, 1)
+          this.card.splice(index, 1);
           break;
         case -1:
           //下移
@@ -120,9 +126,13 @@ export default {
             let item = this.card[index + 1];
             this.card.splice(index + 1, 1, this.card[index]);
             this.card.splice(index, 1, item);
+            this.display = !this.display;
+            this.display = !this.display;
           }
           break;
       }
+      this.display = !this.display;
+      this.display = !this.display;
     },
     ceratImage() {
       html2cavans(document.getElementById("img"), { allowTaint: true }).then(canvas => {
