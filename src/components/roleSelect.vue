@@ -35,6 +35,7 @@ export default {
     selectArmor(data) {
       data["index"] = this.templateIndex;
       this.$emit("pushTeamData", data);
+      this.$emit("setRoleDisplay");
     }
   },
   props: [
@@ -46,8 +47,11 @@ export default {
 #roleSelect {
   display: flex;
   justify-content: space-between;
-  width: 350px;
+  width: 360px;
   height: 400px;
+  box-shadow: 0px 1px 13px 9px #4f4f4f40;
+  border-radius: 15px;
+  margin: 5px 0 5px;
   > #role {
     width: 120px;
     overflow: auto;
@@ -65,8 +69,9 @@ export default {
 }
 #list {
   position: relative;
-  width: 230px;
+  width: 240px;
   padding-left: 5px;
+  padding-top: 10px;
   > div {
     position: absolute;
     width: 100px;
@@ -83,7 +88,7 @@ export default {
     }
   }
   > div:nth-child(even) {
-    right: 0;
+    right: 20px;
   }
 }
 </style>>
