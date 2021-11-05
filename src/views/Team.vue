@@ -37,9 +37,13 @@
         <component :is='"view"+item.cardType'
                    v-for="(item,i) in card"
                    :key="'view'+item.index"
-                   :boss="card[i].cardData">
+                   :cardData="card[i].cardData">
         </component>
       </div>
+    </div>
+    <div id="screenshot"
+         v-show="screenshotCover">
+      <span @click="closeCover">X</span>
     </div>
   </div>
 </template> 
@@ -66,17 +70,9 @@ export default {
             }
           },
           index: 0
-        },
-        {
-          cardType: "Boss",
-          cardData: {
-            select: {
-              bossName: ""
-            }
-          },
-          index: 1
-        },
+        }
       ],
+      screenshotCover: false
     }
   },
   methods: {
@@ -136,8 +132,11 @@ export default {
     },
     ceratImage() {
       html2cavans(document.getElementById("img"), { allowTaint: true }).then(canvas => {
-        document.body.appendChild(canvas)
+        document.getElementById("screenshot").appendChild(canvas);
+        this.screenshotCover = true;
       });
+    }, closeCover() {
+      this.screenshotCover = false;
     }
   },
   components: {
@@ -183,6 +182,30 @@ export default {
   > #img {
     width: 1080px;
     background-color: #1d2139;
+    padding: 18px 0 80px;
+  }
+}
+#screenshot {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.363);
+  width: 100%;
+  height: 100vh;
+  > canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  > span {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 91px;
+    color: #fff;
+    font-size: 60px;
+    border: 3px solid #fff;
+    text-align: center;
+    cursor: pointer;
   }
 }
 </style>
