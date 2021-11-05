@@ -20,7 +20,12 @@
   </div>
 </template>
 <script>
-import bossPath from '../../assets/bosspath.json';
+import bossPath from '../../../public/json/bosspath.json';
+import { $getJson } from '../../http'
+
+const getBossDataJson = data => {
+  return $getJson('json/bossPath.json')
+}
 
 export default {
   name: "cardBoss",
@@ -37,6 +42,10 @@ export default {
     pushBossData() {
       this.$emit("pushBossData", this.bossData);
     }
+  }, created() {
+    getBossDataJson({}).then((result) => {
+      this.bossPath = result.data;
+    })
   }
 }
 </script>

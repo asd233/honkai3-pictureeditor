@@ -3,14 +3,17 @@
     <p>分数</p>
     <input class="form-control"
            type="text"
-           v-model="teamData.score">
+           v-model="teamData.score"
+           @keyup="pushTeamData(null)">
     <p>作者</p>
     <input class="form-control"
            type="text"
-           v-model="teamData.author">
+           v-model="teamData.author"
+           @keyup="pushTeamData(null)">
     <label>
       <input type="checkbox"
-             v-model="teamData.newTag">
+             v-model="teamData.newTag"
+             @change="pushTeamData(null)">
       NEW!标志
     </label>
 
@@ -23,6 +26,7 @@
             @click="setRoleDisplay(0)">从素材库选择</button>
     <roleSelect v-if="teamData.memberList[0].tag"
                 :templateIndex="0"
+                :roleData=roleData
                 @pushTeamData="pushTeamData"
                 @setRoleDisplay="setRoleDisplay(0)">
     </roleSelect>
@@ -36,6 +40,7 @@
             @click="setRoleDisplay(1)">从素材库选择</button>
     <roleSelect v-if="teamData.memberList[1].tag"
                 :templateIndex="1"
+                :roleData=roleData
                 @pushTeamData="pushTeamData"
                 @setRoleDisplay="setRoleDisplay(1)">
     </roleSelect>
@@ -49,6 +54,7 @@
             @click="setRoleDisplay(2)">从素材库选择</button>
     <roleSelect v-if="teamData.memberList[2].tag"
                 :templateIndex="2"
+                :roleData=roleData
                 @pushTeamData="pushTeamData"
                 @setRoleDisplay="setRoleDisplay(2)">
     </roleSelect>
@@ -59,7 +65,9 @@
            readonly="readonly"
            v-model="teamData.memberList[3].data.name">
     <button class="btn btn-default"
-            @click="setRoleDisplay(3)">从素材库选择</button>
+            @click="setRoleDisplay(3)">
+      从素材库选择
+    </button>
     <div id="elf"
          v-show="teamData.memberList[3].tag">
       <div v-for="(item,i) in elf"
@@ -73,29 +81,42 @@
 </template>
 <script>
 import roleSelect from '../roleSelect.vue'
-import elf from '../../assets/elf.json'
+import { $getJson } from '../../http'
+
+const getroleDataJson = data => {
+  return $getJson('json/role.json')
+}
+const getElfDataJson = data => {
+  return $getJson('json/elf.json')
+}
+
 export default {
   data() {
     return {
       teamData: {
-        score: 0,
+        score: "0",
         author: "",
         newTag: false,
         memberList: [
           {
-            data: { name: "" },
+            data: { name: "", path: "" },
             tag: false
           },
           {
-            data: { name: "" },
+            data: { name: "", path: "" },
             tag: false
           }, {
-            data: { name: "" },
+            data: { name: "", path: "" },
             tag: false
           }, {
-            data: { name: "" },
+            data: { name: "", path: "" },
             tag: false
           }
+        ]
+      },
+      roleData: {
+        role: [
+          { roleList: [] }
         ]
       },
       elf: elf.elf,
@@ -103,13 +124,27 @@ export default {
   },
   methods: {
     pushTeamData(data) {
-      this.teamData.memberList[data.index].data = data;
+      console.log(data);
+      if (data !== null) {
+        this.teamData.memberList[data.index].data = data;
+      }
       this.$emit("pushTeamData", this.teamData);
     },
     setRoleDisplay(index) {
+      if (index === 3) {
+        getElfDataJson({}).then((result) => {
+          this.elf = result.data.elf;
+        })
+      } else {
+        getroleDataJson({}).then((result) => {
+          this.roleData = result.data;
+        })
+      }
+
       this.teamData.memberList[index].tag = !this.teamData.memberList[index].tag
     },
     setElfDisplay(data) {
+
       this.teamData.memberList[3].tag = false;
       data.index = 3;
       this.pushTeamData(data);

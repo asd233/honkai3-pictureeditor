@@ -40,6 +40,31 @@ export default {
   methods: {
     pushType() {
       this.$emit("getCardType", this.select, this.index);
+      if (this.select === "Team") {
+        //   初始化team组件，防止viewTeam组件读取不到数据
+        let teamData = {
+          score: "0",
+          author: "",
+          newTag: false,
+          memberList: [
+            {
+              data: { name: "", path: "" },
+              tag: false
+            },
+            {
+              data: { name: "", path: "" },
+              tag: false
+            }, {
+              data: { name: "", path: "" },
+              tag: false
+            }, {
+              data: { name: "", path: "" },
+              tag: false
+            }
+          ]
+        };
+        this.transferTeamData(teamData);
+      }
     },
     transferBossData(bossData) {
       this.$emit("getBossData", bossData, this.index);
