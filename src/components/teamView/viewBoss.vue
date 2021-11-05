@@ -1,22 +1,22 @@
 <template>
   <div id="viewBoss">
-    <img :src="boss.select.path"
+    <img :src="cardData.select.path"
          id="bossImg"
          class="abs">
     <img src="../../assets/team/boss-cover.png"
          id="bossCover"
          class="abs">
-    <span class="abs">{{boss.select.bossName}}</span>
+    <span class="abs">{{cardData.select.bossName}}</span>
     <img src="../../assets/team/sss.png"
          id="sss"
          class="abs"
-         v-if="boss.tag">
+         v-if="cardData.tag">
   </div>
 </template>
 <script>
 export default {
   props: [
-    "boss"
+    "cardData"
   ]
 }
 </script>

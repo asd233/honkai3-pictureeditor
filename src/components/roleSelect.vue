@@ -20,11 +20,9 @@
   </div>
 </template>
 <script>
-import roleData from '../assets/role.json'
 export default {
   data() {
     return {
-      roleData: roleData,
       selectIndex: 0,
     }
   },
@@ -39,7 +37,8 @@ export default {
     }
   },
   props: [
-    "templateIndex"
+    "templateIndex",
+    "roleData"
   ]
 }
 </script>
@@ -68,27 +67,28 @@ export default {
   }
 }
 #list {
-  position: relative;
+  display: flex;
   width: 240px;
   padding-left: 5px;
   padding-top: 10px;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
   > div {
-    position: absolute;
-    width: 100px;
+    width: 117px;
     height: 130px;
     > img {
-      position: absolute;
       width: 115px;
     }
     > span {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
+      display: block;
+      width: 90px;
       text-align: center;
     }
-  }
-  > div:nth-child(even) {
-    right: 20px;
   }
 }
 </style>>

@@ -1,0 +1,330 @@
+{
+    "role": [
+        {
+            "roleName": "布洛妮娅",
+            "roleList": [
+                {
+                    "name": "彗星",
+                    "path": "rolePicture/Bronya/huixing.png"
+                },
+                {
+                    "name": "骇兔",
+                    "path": "rolePicture/Bronya/haitu.png"
+                },
+                {
+                    "name": "理之律者",
+                    "path": "rolePicture/Bronya/lizhilvzhe.png"
+                },
+                {
+                    "name": "黑核",
+                    "path": "rolePicture/Bronya/heihe.png"
+                },
+                {
+                    "name": "次元",
+                    "path": "rolePicture/Bronya/ciyuan.png"
+                },
+                {
+                    "name": "银狼",
+                    "path": "rolePicture/Bronya/yinlang.png"
+                },
+                {
+                    "name": "战车",
+                    "path": "rolePicture/Bronya/zhanche.png"
+                },
+                {
+                    "name": "山吹",
+                    "path": "rolePicture/Bronya/shanchui.png"
+                },
+                {
+                    "name": "雪地",
+                    "path": "rolePicture/Bronya/xuedi.png"
+                }
+            ]
+        },
+        {
+            "roleName": "幽兰戴尔",
+            "roleList": [
+                {
+                    "name": "荣光",
+                    "path": "rolePicture/Durandal/rongguang.png"
+                },
+                {
+                    "name": "星猫",
+                    "path": "rolePicture/Durandal/xingmao.png"
+                },
+                {
+                    "name": "月魄",
+                    "path": "rolePicture/Durandal/yuepo.png"
+                }
+            ]
+        },
+        {
+            "roleName": "爱丽希雅",
+            "roleList": [
+                {
+                    "name": "粉色妖精小姐",
+                    "path": "rolePicture/Elysia/pinkElf.png"
+                }
+            ]
+        },
+        {
+            "roleName": "菲谢尔",
+            "roleList": [
+                {
+                    "name": "皇女",
+                    "path": "rolePicture/Fischl/princess.png"
+                }
+            ]
+        },
+        {
+            "roleName": "符华",
+            "roleList": [
+                {
+                    "name": "白夜",
+                    "path": "rolePicture/Fuka/baiye.png"
+                },
+                {
+                    "name": "炽翎",
+                    "path": "rolePicture/Fuka/chiling.png"
+                },
+                {
+                    "name": "识律",
+                    "path": "rolePicture/Fuka/shilv.png"
+                },
+                {
+                    "name": "雾都",
+                    "path": "rolePicture/Fuka/wudu.png"
+                },
+                {
+                    "name": "迅羽",
+                    "path": "rolePicture/Fuka/xunyu.png"
+                },
+                {
+                    "name": "云墨",
+                    "path": "rolePicture/Fuka/yunmo.png"
+                },
+                {
+                    "name": "月轮",
+                    "path": "rolePicture/Fuka/yuelun.png"
+                }
+            ]
+        },
+        {
+            "roleName": "无量塔姬子",
+            "roleList": [
+                {
+                    "name": "极地",
+                    "path": "rolePicture/Himeko/jidi.png"
+                },
+                {
+                    "name": "疾风",
+                    "path": "rolePicture/Himeko/jifeng.png"
+                },
+                {
+                    "name": "凯旋",
+                    "path": "rolePicture/Himeko/kaixuan.png"
+                },
+                {
+                    "name": "玫瑰",
+                    "path": "rolePicture/Himeko/Rose.png"
+                },
+                {
+                    "name": "深红",
+                    "path": "rolePicture/Himeko/shenhong.png"
+                },
+                {
+                    "name": "真红",
+                    "path": "rolePicture/Himeko/zhenhong.png"
+                }
+            ]
+        },
+        {
+            "roleName": "卡莲",
+            "roleList": [
+                {
+                    "name": "第六夜",
+                    "path": "rolePicture/Kallen/diliuye.png"
+                },
+                {
+                    "name": "今样",
+                    "path": "rolePicture/Kallen/jinyang.png"
+                },
+                {
+                    "name": "原罪",
+                    "path": "rolePicture/Kallen/yuanzui.png"
+                }
+            ]
+        },
+        {
+            "roleName": "琪亚娜",
+            "roleList": [
+                {
+                    "name": "领域装·白给",
+                    "path": "rolePicture/Kiana/bailian.png"
+                },
+                {
+                    "name": "空律",
+                    "path": "rolePicture/Kiana/konglv.png"
+                },
+                {
+                    "name": "圣女",
+                    "path": "rolePicture/Kiana/shengnv.png"
+                },
+                {
+                    "name": "天穹游侠",
+                    "path": "rolePicture/Kiana/tianqiong.png"
+                },
+                {
+                    "name": "炎律",
+                    "path": "rolePicture/Kiana/yanlv.png"
+                },
+                {
+                    "name": "游侠",
+                    "path": "rolePicture/Kiana/youxia.png"
+                },
+                {
+                    "name": "月光",
+                    "path": "rolePicture/Kiana/yueguang.png"
+                }
+            ]
+        },
+        {
+            "roleName": "雷电芽衣",
+            "roleList": [
+                {
+                    "name": "断罪鹦鹉",
+                    "path": "rolePicture/Mei/duanzui.png"
+                },
+                {
+                    "name": "绯红",
+                    "path": "rolePicture/Mei/feihong.png"
+                },
+                {
+                    "name": "鬼铠",
+                    "path": "rolePicture/Mei/guikai.png"
+                },
+                {
+                    "name": "雷律",
+                    "path": "rolePicture/Mei/leilv.png"
+                },
+                {
+                    "name": "破晓",
+                    "path": "rolePicture/Mei/poxiao.png"
+                },
+                {
+                    "name": "强无敌",
+                    "path": "rolePicture/Mei/qiangxi.png"
+                },
+                {
+                    "name": "鹦鹉",
+                    "path": "rolePicture/Mei/yingwu.png"
+                }
+            ]
+        },
+        {
+            "roleName": "丽塔",
+            "roleList": [
+                {
+                    "name": "黯蔷薇",
+                    "path": "rolePicture/Rita/qiangwei.png"
+                },
+                {
+                    "name": "影铁",
+                    "path": "rolePicture/Rita/yingtie.png"
+                },
+                {
+                    "name": "冰箱的主人",
+                    "path": "rolePicture/Rita/yuehun.png"
+                }
+            ]
+        },
+        {
+            "roleName": "八重樱",
+            "roleList": [
+                {
+                    "name": "巫女",
+                    "path": "rolePicture/Sakura/wunv.png"
+                },
+                {
+                    "name": "勿忘",
+                    "path": "rolePicture/Sakura/wuwang.png"
+                },
+                {
+                    "name": "真炎幸魂",
+                    "path": "rolePicture/Sakura/zhenyan.png"
+                },
+                {
+                    "name": "夜隐重霞",
+                    "path": "rolePicture/Sakura/xia.png"
+                }
+            ]
+        },
+        {
+            "roleName": "希儿",
+            "roleList": [
+                {
+                    "name": "彼岸",
+                    "path": "rolePicture/Seele/bian.png"
+                },
+                {
+                    "name": "幻海梦蝶",
+                    "path": "rolePicture/Seele/huanhai.png"
+                },
+                {
+                    "name": "魇夜星渊",
+                    "path": "rolePicture/Seele/yanye.png"
+                }
+            ]
+        },
+        {
+            "roleName": "世界第一可爱",
+            "roleList": [
+                {
+                    "name": "圣贤王·观星",
+                    "path": "rolePicture/Theresa/guanxing.png"
+                },
+                {
+                    "name": "神恩颂歌",
+                    "path": "rolePicture/Theresa/shenen.png"
+                },
+                {
+                    "name": "誓约",
+                    "path": "rolePicture/Theresa/shiyue.png"
+                },
+                {
+                    "name": "樱火轮舞",
+                    "path": "rolePicture/Theresa/yinghuo.png"
+                },
+                {
+                    "name": "暮光骑士·月煌",
+                    "path": "rolePicture/Theresa/yuehuang.png"
+                },
+                {
+                    "name": "月下",
+                    "path": "rolePicture/Theresa/yuexia.png"
+                },
+                {
+                    "name": "紫苑",
+                    "path": "rolePicture/Theresa/ziyuan.png"
+                }
+            ]
+        },
+        {
+            "roleName": "伏特加女孩",
+            "roleList": [
+                {
+                    "name": "狂热蓝调",
+                    "path": "rolePicture/Vodga/kuangre.png"
+                },
+                {
+                    "name": "樱桃炸弹",
+                    "path": "rolePicture/Vodga/yingtao.png"
+                },
+                {
+                    "name": "蓝莓特攻",
+                    "path": "rolePicture/Vodga/lanmei.png"
+                }
+            ]
+        }
+    ]
+}
