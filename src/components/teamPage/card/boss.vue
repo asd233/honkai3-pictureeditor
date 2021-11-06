@@ -20,8 +20,8 @@
   </div>
 </template>
 <script>
-import bossPath from '../../../public/json/bosspath.json';
-import { $getJson } from '../../http'
+
+import { $getJson } from '../../../http'
 
 const getBossDataJson = data => {
   return $getJson('json/bossPath.json')
@@ -35,7 +35,7 @@ export default {
         tag: false,
         select: "",
       },
-      bossPath: bossPath
+      bossPath: {}
     }
   },
   methods: {

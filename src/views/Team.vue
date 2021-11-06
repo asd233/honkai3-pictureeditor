@@ -48,10 +48,10 @@
   </div>
 </template> 
 <script>
-import Card from '../components/Card'
-import viewBoss from '../components/teamView/viewBoss.vue'
-import viewTeam from '../components/teamView/viewTeam.vue'
-import viewLine from '../components/teamView/viewLine.vue'
+import Card from '../components/teamPage/Card'
+import viewBoss from '../components/teamPage/teamView/viewBoss.vue'
+import viewTeam from '../components/teamPage/teamView/viewTeam.vue'
+import viewLine from '../components/teamPage/teamView/viewLine.vue'
 import html2cavans from '../../node_modules/html2canvas/dist/html2canvas';
 
 let cardKey = 0;

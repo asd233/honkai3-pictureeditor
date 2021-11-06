@@ -81,7 +81,7 @@
 </template>
 <script>
 import roleSelect from '../roleSelect.vue'
-import { $getJson } from '../../http'
+import { $getJson } from '../../../http'
 
 const getroleDataJson = data => {
   return $getJson('json/role.json')

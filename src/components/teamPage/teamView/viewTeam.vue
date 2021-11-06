@@ -14,7 +14,7 @@
     </div>
     <div id="new"
          v-show="cardData.newTag">
-      <img src="../../assets/team/new.png">
+      <img src="../../../assets/team/new.png">
     </div>
     <div id="score">{{cardData.score}}</div>
     <div id="author">{{cardData.author}}</div>
@@ -30,7 +30,7 @@ export default {
 <style lang="less" scoped>
 #viewTeam {
   position: relative;
-  background-image: url(../../assets/team/1634211681560.png);
+  background-image: url(../../../assets/team/1634211681560.png);
   width: 1080px;
   height: 257px;
   color: #fff;
