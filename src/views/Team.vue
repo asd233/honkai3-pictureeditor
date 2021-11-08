@@ -1,6 +1,5 @@
 <template>
-  <div id="team"
-       v-if="display">
+  <div id="team">
     <div id="sidebar">
       <div class="top">
         <p>
@@ -60,7 +59,6 @@ export default {
   name: "team",
   data() {
     return {
-      display: true,
       card: [
         {
           cardType: "Boss",
@@ -122,13 +120,9 @@ export default {
             let item = this.card[index + 1];
             this.card.splice(index + 1, 1, this.card[index]);
             this.card.splice(index, 1, item);
-            this.display = !this.display;
-            this.display = !this.display;
           }
           break;
       }
-      this.display = !this.display;
-      this.display = !this.display;
     },
     ceratImage() {
       html2cavans(document.getElementById("img"), { allowTaint: true }).then(canvas => {
