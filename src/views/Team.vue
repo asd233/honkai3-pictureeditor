@@ -32,7 +32,7 @@
 
     </div>
     <div id="view">
-      <div id="img">
+      <div id="teamPageImg">
         <component :is='"view"+item.cardType'
                    v-for="(item,i) in card"
                    :key="'view'+item.index"
@@ -125,7 +125,7 @@ export default {
       }
     },
     ceratImage() {
-      html2cavans(document.getElementById("img"), { allowTaint: true }).then(canvas => {
+      html2cavans(document.getElementById("teamPageImg"), { allowTaint: true }).then(canvas => {
         document.getElementById("screenshot").appendChild(canvas);
         this.screenshotCover = true;
       });
@@ -173,7 +173,8 @@ export default {
   width: 78%;
   height: 100vh;
   background-color: #1d2139;
-  > #img {
+  overflow: auto;
+  > #teamPageImg {
     width: 1080px;
     background-color: #1d2139;
     padding: 18px 0 80px;
