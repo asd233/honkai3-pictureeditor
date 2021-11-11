@@ -4,3 +4,8 @@
          alt="">
   </div>
 </template>
+<style lang="postcss" scoped>
+img {
+  width: 100%;
+}
+</style>
