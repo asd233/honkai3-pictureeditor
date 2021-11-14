@@ -1,16 +1,31 @@
 <template>
-  <div id="bossPageAbyss">
+  <div id="bossPageBattle">
     <div class="abs">
-      <img src=""
-           class="abs">
+      <img :src="selectBoss.path"
+           class="abs"
+           style="width:370px">
       <img src="../../assets/bossPage/boss-fg.png"
            class="abs">
-      <p class="abs">123</p>
+      <img src="../../assets/team/sss.png"
+           class="abs"
+           style="top:10px;right:10px"
+           v-show="rankTag">
+      <p class="abs">{{selectBoss.bossName}}</p>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: [
+    "selectBoss",
+    "rankTag"
+  ]
+}
+</script>
+
 <style lang="less" scoped>
-#bossPageAbyss {
+#bossPageBattle {
   width: 100%;
   height: 100%;
   position: relative;

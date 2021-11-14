@@ -1,25 +1,43 @@
 
 <template>
-  <div id="bossPageBattle">
+  <div id="bossPageAbyss">
     <div id="left"
          class="abs">
-      <img src=""
-           class="abs">
+      <img :src="selectBoss.path"
+           class="abs"
+           id="bossPageAbyssImg"
+           style="width:370px">
       <img src="../../assets/bossPage/boss-fg.png"
            class="abs">
-      <p class="abs">123</p>
+      <img src="../../assets/team/sss.png"
+           class="abs"
+           style="top:10px;right:10px"
+           v-show="rankTag">
+      <p class="abs">{{selectBoss.bossName}}</p>
     </div>
     <div id="right"
          class="abs">
       <img src="../../assets/bossPage/sy-info.png"
            class="abs">
-      <p>扰动幅度：123</p>
-      <p>天气：123</p>
+      <p>扰动幅度：{{difficulty}}</p>
+      <p>天气：{{weather}}</p>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: [
+    "selectBoss",
+    "weather",
+    "difficulty",
+    "rankTag"
+  ]
+}
+</script>
+
 <style lang="less" scoped>
-#bossPageBattle {
+#bossPageAbyss {
   width: 100%;
   height: 100%;
   position: relative;
