@@ -54,8 +54,7 @@
       </p>
       <input type="number"
              class="form-control"
-             v-model="elfStar">
-
+             v-model.number="elfStar">
       <p>
         扰动幅度
       </p>
@@ -70,13 +69,13 @@
              v-model="weather">
 
       <p>
-        介绍
+        介绍<br>***红色字体/***<br>###加粗/###
       </p>
       <textarea style="height: 200px;
-      margin-bottom:10px"
+                       margin-bottom:10px"
                 class="form-control"
                 v-model="introduce">
-      </textarea>
+                </textarea>
       <div class="option">
         <button class="btn btn-success">
           生成图片
@@ -99,12 +98,21 @@
           <div id="elf"
                class="abs">
             <img src="teamConfig/elf/Bella.png"
-                 alt="">
+                 class="abs">
+            <div id="star"
+                 class="abs">
+              <div>
+                <img src="../assets/bossPage/star.png"
+                     v-for="item in elfStar">
+              </div>
+
+            </div>
           </div>
           <div id="score"
                class="abs">{{score}}</div>
         </div>
-        <p>{{introduce}}</p>
+        <p v-html="introduceView"
+           id="introduce"></p>
         <img src="../assets/team/split-long.png"
              style="width:100%">
       </div>
@@ -132,15 +140,29 @@ export default {
       rankTag: "",
       QRcodeLink: "",
       QRcodeTips: "",
-      elfStar: "",
+      elfStar: 1,
       difficulty: "",
       weather: "",
       introduce: "",
+      introduceView: "",
+
     }
   },
   components: {
     bossPageAbyss,
     bossPageBattle
+  },
+  watch: {
+    introduce: function (val) {
+      let redStear = /\*{3}/;
+      let redEnd = /\/\*{3}/;
+      let strongStear = /\#{3}/;
+      let strongEnd = /\/\#{3}/;
+      this.introduceView = val.replace(redStear, "<span>")
+        .replace(redEnd, "</span>")
+        .replace(strongStear, "<strong>")
+        .replace(strongEnd, "</strong>");
+    }
   }, created() {
     getBossDataJson({}).then((result) => {
       this.bossPath = result.data;
@@ -148,7 +170,7 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
 #boss {
   display: flex;
   text-align: left;
@@ -194,14 +216,24 @@ export default {
         width: 100%;
         height: 100%;
       }
+      > #star {
+        bottom: 0;
+        right: 0;
+      }
     }
   }
   > #teamConfig {
     width: 1080px;
     min-height: 750px;
   }
-  > p {
+  > #introduce {
     padding: 40px 20px;
+    color: #fff;
+    font-size: 24px;
+    white-space: pre-line;
+    > span {
+      color: #d31d1d;
+    }
   }
 }
 </style>
