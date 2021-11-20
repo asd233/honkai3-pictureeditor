@@ -6,7 +6,7 @@
         <router-link to="/team">队伍阵容概览</router-link>
       </p>
       <p>
-        <router-link to="/boss">战场深渊(未完成)</router-link>
+        <router-link to="/boss">战场深渊</router-link>
       </p>
       <div id="author">
         <a href="https://github.com/asd233/honkai3-pictureeditor">
