@@ -11,8 +11,7 @@
       <div>
         <!-- 卡片组件 -->
         <card @getCardType="getCardType"
-              @getBossData="getBossData"
-              @getTeamData="getTeamData"
+              @getSubpageData="getSubpageData"
               @cardOption="cardOption"
               v-for="(item,i) in card"
               :index="i"
@@ -31,8 +30,10 @@
       </div>
 
     </div>
+    <!-- 可视化部分 -->
     <div id="view">
       <div id="teamPageImg">
+        <!-- 与卡片组件相对应的可视化部分 -->
         <component :is='"view"+item.cardType'
                    v-for="(item,i) in card"
                    :key="'view'+item.index"
@@ -53,8 +54,6 @@ import viewTeam from '../components/teamPage/teamView/viewTeam.vue'
 import viewLine from '../components/teamPage/teamView/viewLine.vue'
 import html2cavans from '../../node_modules/html2canvas/dist/html2canvas';
 
-let cardKey = 0;
-let viewKey = 0;
 export default {
   name: "team",
   data() {
@@ -85,22 +84,15 @@ export default {
         index: this.card.length
       })
     },
-    cardKeyIncrease() {
-      return cardKey++;
-    },
-    viewKeyIncrease() {
-      return viewKey++;
-    },
     getCardType(cardType, index) {
+      // 获取卡片的类型
       this.card[index].cardType = cardType;
     },
-    getBossData(bossdata, index) {
-      this.card[index].cardData = bossdata;
-    },
-    getTeamData(teamdata, index) {
-      this.card[index].cardData = teamdata;
+    getSubpageData(subpageData, index) {
+      this.card[index].cardData = subpageData;
     },
     cardOption(order, index) {
+      // 此方法根据传入的order值对卡片进行移动或删除操作，index值为需要操作的卡片的索引值
       switch (order) {
         case 1:
           //上移
@@ -125,11 +117,13 @@ export default {
       }
     },
     ceratImage() {
+      // 调用插件生成view部分的截图
       html2cavans(document.getElementById("teamPageImg"), { allowTaint: true }).then(canvas => {
         document.getElementById("screenshot").appendChild(canvas);
         this.screenshotCover = true;
       });
     }, closeCover() {
+      // 关闭遮罩层
       this.screenshotCover = false;
     }
   },

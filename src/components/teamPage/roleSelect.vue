@@ -28,9 +28,11 @@ export default {
   },
   methods: {
     selectRole(index) {
+      // 选择不同角色
       this.selectIndex = index;
     },
     selectArmor(data) {
+      // 选择同一角色的不同装甲
       data["index"] = this.templateIndex;
       this.$emit("pushTeamData", data);
       this.$emit("setRoleDisplay");

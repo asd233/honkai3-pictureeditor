@@ -1,6 +1,5 @@
 <template>
   <div id="card">
-
     <p>卡片类型</p>
     <select class="
             form-control"
@@ -12,9 +11,9 @@
     </select>
 
     <component :is='select'
-               @pushBossData="transferBossData"
-               @pushTeamData="transferTeamData">
+               @pushSubpageData="transferSubpageData">
     </component>
+
     <div id="cardOption">
       <button class="btn btn-default"
               @click="cardOption(1)">上移</button>
@@ -63,14 +62,11 @@ export default {
             }
           ]
         };
-        this.transferTeamData(teamData);
+        this.transferSubpageData(teamData);
       }
     },
-    transferBossData(bossData) {
-      this.$emit("getBossData", bossData, this.index);
-    },
-    transferTeamData(teamData) {
-      this.$emit("getTeamData", teamData, this.index);
+    transferSubpageData(subpageData) {
+      this.$emit("getSubpageData", subpageData, this.index);
     },
     cardOption(order) {
       this.$emit("cardOption", order, this.index);
