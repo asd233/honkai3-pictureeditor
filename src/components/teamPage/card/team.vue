@@ -124,31 +124,28 @@ export default {
   },
   methods: {
     pushTeamData(data) {
-      console.log(data);
-      if (data !== null) {
+      if (data) {
         this.teamData.memberList[data.index].data = data;
       }
-      this.$emit("pushTeamData", this.teamData);
+      this.$emit("pushSubpageData", this.teamData);
     },
     setRoleDisplay(index) {
-      if (index === 3) {
-        getElfDataJson({}).then((result) => {
-          this.elf = result.data.elf;
-        })
-      } else {
-        getroleDataJson({}).then((result) => {
-          this.roleData = result.data;
-        })
-      }
-
       this.teamData.memberList[index].tag = !this.teamData.memberList[index].tag
     },
     setElfDisplay(data) {
-
+      //控制人偶选择的显示，并向父级页面传递数据
       this.teamData.memberList[3].tag = false;
       data.index = 3;
       this.pushTeamData(data);
     }
+  },
+  created() {
+    getElfDataJson({}).then((result) => {
+      this.elf = result.data.elf;
+    })
+    getroleDataJson({}).then((result) => {
+      this.roleData = result.data;
+    })
   },
   components: {
     roleSelect
