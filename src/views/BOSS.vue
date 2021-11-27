@@ -12,7 +12,8 @@
         模式
       </p>
       <select class="form-control"
-              v-model="modeType">
+              v-model="modeType"
+              @change="controlDisabled">
         <option value="bossPageAbyss">深渊</option>
         <option value="bossPageBattle">战场</option>
       </select>
@@ -42,13 +43,15 @@
       </p>
       <input type="number"
              class="form-control"
-             v-model="difficulty">
+             v-model="difficulty"
+             :disabled="disabled">
       <p>
         天气
       </p>
       <input type="text"
              class="form-control"
-             v-model="weather">
+             v-model="weather"
+             :disabled="disabled">
       <p>
         人偶
       </p>
@@ -189,8 +192,8 @@ export default {
       introduce: "",
       introduceView: "",
       teamConfigImg: "",
-      screenshotCover: false
-
+      screenshotCover: false,
+      disabled: true
     }
   },
   methods: {
@@ -214,6 +217,13 @@ export default {
           background: '#fff', // color or null for transparent
           size: 190 // in pixels
         }, document.querySelector('#QRcode'));
+      }
+    },
+    controlDisabled() {
+      if (this.modeType === "bossPageAbyss") {
+        this.disabled = false;
+      } else {
+        this.disabled = true;
       }
     },
     createImg() {
