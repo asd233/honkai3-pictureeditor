@@ -52,7 +52,6 @@ import Card from '../components/teamPage/Card'
 import viewBoss from '../components/teamPage/teamView/viewBoss.vue'
 import viewTeam from '../components/teamPage/teamView/viewTeam.vue'
 import viewLine from '../components/teamPage/teamView/viewLine.vue'
-import html2cavans from '../../node_modules/html2canvas/dist/html2canvas';
 
 export default {
   name: "team",
@@ -118,11 +117,10 @@ export default {
     },
     ceratImage() {
       // 调用插件生成view部分的截图
-      html2cavans(document.getElementById("teamPageImg"), { allowTaint: true }).then(canvas => {
-        document.getElementById("screenshot").appendChild(canvas);
-        this.screenshotCover = true;
-      });
-    }, closeCover() {
+      this.$utils.ceratImage("teamPageImg", "screenshot");
+      this.screenshotCover = true;
+    },
+    closeCover() {
       // 关闭遮罩层
       this.screenshotCover = false;
     }

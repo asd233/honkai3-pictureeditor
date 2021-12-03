@@ -162,7 +162,6 @@
 <script>
 import bossPageAbyss from '../components/bossPage/bossPageAbyss'
 import bossPageBattle from '../components/bossPage/bossPageBattle'
-import html2cavans from '../../node_modules/html2canvas/dist/html2canvas';
 import QRCode from 'qr-creator'
 import { $getJson } from '../http'
 
@@ -227,10 +226,9 @@ export default {
       }
     },
     createImg() {
-      html2cavans(document.getElementById("bossPageImg"), { allowTaint: true }).then(canvas => {
-        document.getElementById("bossPageScreenshot").appendChild(canvas);
-        this.screenshotCover = true;
-      });
+      // 调用插件生成view部分的截图
+      this.$utils.ceratImage("bossPageImg", "bossPageScreenshot");
+      this.screenshotCover = true;
     }, closeCover() {
       this.screenshotCover = false;
     }
