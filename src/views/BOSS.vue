@@ -162,7 +162,6 @@
 <script>
 import bossPageAbyss from '../components/bossPage/bossPageAbyss'
 import bossPageBattle from '../components/bossPage/bossPageBattle'
-import html2cavans from '../../node_modules/html2canvas/dist/html2canvas';
 import QRCode from 'qr-creator'
 import { $getJson } from '../http'
 
@@ -227,10 +226,9 @@ export default {
       }
     },
     createImg() {
-      html2cavans(document.getElementById("bossPageImg"), { allowTaint: true }).then(canvas => {
-        document.getElementById("bossPageScreenshot").appendChild(canvas);
-        this.screenshotCover = true;
-      });
+      // 调用插件生成view部分的截图
+      this.$utils.cerateImage("bossPageImg", "bossPageScreenshot");
+      this.screenshotCover = true;
     }, closeCover() {
       this.screenshotCover = false;
     }
@@ -241,13 +239,13 @@ export default {
   },
   watch: {
     introduce: function (val) {
-      let redStear = /\*{3}/;
+      let redStart = /\*{3}/;
       let redEnd = /\/\*{3}/;
-      let strongStear = /\#{3}/;
+      let strongStart = /\#{3}/;
       let strongEnd = /\/\#{3}/;
-      this.introduceView = val.replace(redStear, "<span>")
+      this.introduceView = val.replace(redStart, "<span>")
         .replace(redEnd, "</span>")
-        .replace(strongStear, "<strong>")
+        .replace(strongStart, "<strong>")
         .replace(strongEnd, "</strong>");
     }
   }, created() {
