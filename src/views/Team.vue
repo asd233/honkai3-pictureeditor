@@ -117,7 +117,7 @@ export default {
     },
     cerateImage() {
       // 调用插件生成view部分的截图
-      this.$utils.ceratImage("teamPageImg", "screenshot");
+      this.$utils.cerateImage("teamPageImg", "screenshot");
       this.screenshotCover = true;
     },
     closeCover() {
