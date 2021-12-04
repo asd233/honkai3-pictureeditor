@@ -227,7 +227,7 @@ export default {
     },
     createImg() {
       // 调用插件生成view部分的截图
-      this.$utils.cerateImage("bossPageImg", "bossPageScreenshot");
+      this.$utils.ceratImage("bossPageImg", "bossPageScreenshot");
       this.screenshotCover = true;
     }, closeCover() {
       this.screenshotCover = false;
