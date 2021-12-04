@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     pushBossData() {
-      this.$emit("pushSubpageData", this.bossData);
+      this.$emit("pushSubPageData", this.bossData);
     }
   }, created() {
     getBossDataJson({}).then((result) => {

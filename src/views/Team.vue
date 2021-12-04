@@ -11,7 +11,7 @@
       <div>
         <!-- 卡片组件 -->
         <card @getCardType="getCardType"
-              @getSubpageData="getSubpageData"
+              @getSubPageData="getSubPageData"
               @cardOption="cardOption"
               v-for="(item,i) in card"
               :index="i"
@@ -87,8 +87,8 @@ export default {
       // 获取卡片的类型
       this.card[index].cardType = cardType;
     },
-    getSubpageData(subpageData, index) {
-      this.card[index].cardData = subpageData;
+    getSubPageData(subPageData, index) {
+      this.card[index].cardData = subPageData;
     },
     cardOption(order, index) {
       // 此方法根据传入的order值对卡片进行移动或删除操作，index值为需要操作的卡片的索引值

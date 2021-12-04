@@ -11,7 +11,7 @@
     </select>
 
     <component :is='select'
-               @pushSubpageData="transferSubpageData">
+               @pushSubPageData="transferSubPageData">
     </component>
 
     <div id="cardOption">
@@ -62,11 +62,11 @@ export default {
             }
           ]
         };
-        this.transferSubpageData(teamData);
+        this.transferSubPageData(teamData);
       }
     },
-    transferSubpageData(subpageData) {
-      this.$emit("getSubpageData", subpageData, this.index);
+    transferSubPageData(subPageData) {
+      this.$emit("getSubPageData", subPageData, this.index);
     },
     cardOption(order) {
       this.$emit("cardOption", order, this.index);

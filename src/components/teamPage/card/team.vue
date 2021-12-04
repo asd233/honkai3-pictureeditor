@@ -83,7 +83,7 @@
 import roleSelect from '../roleSelect.vue'
 import { $getJson } from '../../../http'
 
-const getroleDataJson = data => {
+const getRoleDataJson = data => {
   return $getJson('json/role.json')
 }
 const getElfDataJson = data => {
@@ -127,7 +127,7 @@ export default {
       if (data) {
         this.teamData.memberList[data.index].data = data;
       }
-      this.$emit("pushSubpageData", this.teamData);
+      this.$emit("pushSubPageData", this.teamData);
     },
     setRoleDisplay(index) {
       this.teamData.memberList[index].tag = !this.teamData.memberList[index].tag
@@ -143,7 +143,7 @@ export default {
     getElfDataJson({}).then((result) => {
       this.elf = result.data.elf;
     })
-    getroleDataJson({}).then((result) => {
+    getRoleDataJson({}).then((result) => {
       this.roleData = result.data;
     })
   },

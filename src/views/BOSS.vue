@@ -23,7 +23,8 @@
       <select class="form-control"
               v-model="selectBoss">
         <option v-for="(item,i) in bossPath.paths"
-                :value="bossPath.paths[i]">
+                :value="bossPath.paths[i]"
+                :key="i">
           {{item.bossName}}
         </option>
       </select>
@@ -58,7 +59,8 @@
       <select class="form-control"
               v-model="selectElf">
         <option v-for="(item,i) in elfPath.elf"
-                :value="elfPath.elf[i]">
+                :value="elfPath.elf[i]"
+                :key="i">
           {{item.name}}
         </option>
       </select>
@@ -126,7 +128,8 @@
                  class="abs">
               <div>
                 <img src="../assets/bossPage/star.png"
-                     v-for="item in elfStar">
+                     v-for="(item,i) in elfStar"
+                     :key="i">
               </div>
 
             </div>
@@ -286,7 +289,7 @@ export default {
     position: relative;
     width: 1080px;
     height: 210px;
-    background-image: url("../assets/bossPage/bosspage-score.png");
+    background-image: url("../assets/bossPage/bossPage-score.png");
     > #score {
       top: 10px;
       right: 100px;
