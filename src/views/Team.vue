@@ -24,7 +24,7 @@
           添加
         </button>
         <button class="btn btn-success"
-                @click="cerateImage">
+                @click="createImage">
           生成图片
         </button>
       </div>
@@ -115,7 +115,7 @@ export default {
           break;
       }
     },
-    cerateImage() {
+    createImage() {
       // 调用插件生成view部分的截图
       this.$utils.cerateImage("teamPageImg", "screenshot");
       this.screenshotCover = true;
