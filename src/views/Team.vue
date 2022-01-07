@@ -117,7 +117,7 @@ export default {
     },
     createImage() {
       // 调用插件生成view部分的截图
-      this.$utils.cerateImage("teamPageImg", "screenshot");
+      this.$utils.cerateImage("teamPageImg", "screenshot", "team");
       this.screenshotCover = true;
     },
     closeCover() {
@@ -193,6 +193,8 @@ export default {
     border: 3px solid #fff;
     text-align: center;
     cursor: pointer;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.363);
   }
 }
 </style>
