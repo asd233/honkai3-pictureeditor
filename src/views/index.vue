@@ -8,6 +8,12 @@
       <p>
         <router-link to="/boss">战场深渊</router-link>
       </p>
+      <p>
+        <router-link to="/videoCover1">视频素材-封面1</router-link>
+      </p>
+      <p>
+        <router-link to="/videoCover2">视频素材-封面2</router-link>
+      </p>
       <div id="author">
         <a href="https://github.com/asd233/honkai3-pictureeditor">
           <img src="https://avatars.githubusercontent.com/u/38546775?s=48&v=4">
@@ -33,8 +39,9 @@
   position: absolute;
   top: 0;
   right: 0;
+  width: 150px;
   background-color: #ffffffd1;
-  box-shadow: -7px 6px 9px 11px #ffffffd1;
+  box-shadow: 0px 0px 9px 11px #ffffffd1;
   > a {
     > img {
       border-radius: 24px;
