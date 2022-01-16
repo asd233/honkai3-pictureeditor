@@ -34,13 +34,15 @@ export default {
     selectArmor(data) {
       // 选择同一角色的不同装甲
       data["index"] = this.templateIndex;
+      data["teamListIndex"] = this.teamListIndex;
       this.$emit("pushTeamData", data);
       this.$emit("setRoleDisplay");
     }
   },
   props: [
     "templateIndex",
-    "roleData"
+    "roleData",
+    "teamListIndex"
   ]
 }
 </script>
