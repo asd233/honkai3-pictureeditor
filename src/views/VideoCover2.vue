@@ -121,7 +121,7 @@ export default {
   methods: {
     createImage() {
       // 调用插件生成view部分的截图
-      this.$utils.cerateImage("videoCoverPageImg", "screenshot", "VideoCover1");
+      this.$utils.cerateImage("videoCoverPageImg", "screenshot", "VideoCover2");
       this.screenshotCover = true;
     },
     closeCover() {
