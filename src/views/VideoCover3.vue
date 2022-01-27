@@ -8,6 +8,7 @@
           </router-link>
         </p>
       </div>
+      <!-- Boss与天气的数据每队是相同的，无需为每个队伍单独配置 -->
       <p>
         BOSS
       </p>
@@ -19,6 +20,13 @@
           {{item.bossName}}
         </option>
       </select>
+
+      <p>
+        天气
+      </p>
+      <input class="form-control"
+             type="text"
+             v-model="weather">
 
       <p>
         队伍选择
@@ -33,7 +41,18 @@
       </select>
 
       <div v-for="(item,memberIndex) in teamList[teamListIndex].team">
+        <!-- 重复渲染三个队员信息表单 -->
         <div>
+          <p>
+            选择深渊
+          </p>
+
+          <select class="form-control"
+                  v-model="teamList[teamListIndex].difficulty">
+            <option :value="difficultyPath[0]">苦痛</option>
+            <option :value="difficultyPath[1]">红莲</option>
+            <option :value="difficultyPath[2]">寂灭</option>
+          </select>
           <!-- 选择角色部分 -->
           <p>
             队员{{memberIndex+1}}
@@ -102,8 +121,17 @@
             {{item.name}}
           </option>
         </select>
-        <br />
       </div>
+
+      <p>人偶星级</p>
+      <select class="form-control"
+              v-model="teamList[teamListIndex].elf.level">
+        <option v-for="i in 4"
+                :value="i"
+                :key="i">
+          {{i}}
+        </option>
+      </select>
 
       <p>
         耗时/积分
@@ -126,8 +154,6 @@
              type="text"
              v-model="teamList[teamListIndex].time">
 
-      <!-- </div> -->
-
       <br />
       <div class="option">
         <button class="btn btn-success"
@@ -137,66 +163,77 @@
       </div>
 
     </div>
+
     <!-- 可视化部分 -->
     <div id="view">
       <div id="videoCoverPageImg">
         <ul>
           <li v-for="(item) in teamList">
             <!-- Boss -->
-            <img class="bossImg"
-                 :src="selectBoss.path">
-
+            <div class="boss">
+              <img class="bossImg"
+                   :src="selectBoss.path">
+              <span>
+                <img :src="item.difficulty">
+                {{weather}}
+              </span>
+            </div>
             <div class="teamRole">
               <div>
-                <div>
-                  <img :src="item.team[0].path">
-                  <span class="attack"
-                        v-if="item.team[0].attackFlag">
-                    <img src="../assets/videoPage/video3/icon-ack.png">
-                    {{item.team[0].attack}}
-                  </span>
-                  <img :src="item.team[0].leave">
-                </div>
+                <img :src="item.team[0].path">
+                <span class="attack"
+                      v-if="item.team[0].attackFlag">
+                  <img src="../assets/videoPage/video3/icon-ack.png">
+                  {{item.team[0].attack}}
+                </span>
+                <img :src="item.team[0].leave">
               </div>
 
               <div>
-                <div>
-                  <img :src="item.team[1].path">
-                  <span v-if="item.team[1].attackFlag">
-                    <img src="../assets/videoPage/video3/icon-ack.png">
-                    {{item.team[1].attack}}
-                  </span>
-                  <img :src="item.team[1].leave">
-                </div>
+                <img :src="item.team[1].path">
+                <span v-if="item.team[1].attackFlag">
+                  <img src="../assets/videoPage/video3/icon-ack.png">
+                  {{item.team[1].attack}}
+                </span>
+                <img :src="item.team[1].leave">
               </div>
 
               <div>
-                <div>
-                  <img :src="item.team[2].path">
-                  <span v-if="item.team[2].attackFlag">
-                    <img src="../assets/videoPage/video3/icon-ack.png">
-                    {{item.team[2].attack}}
-                  </span>
-                  <img :src="item.team[2].leave">
-                </div>
+                <img :src="item.team[2].path">
+                <span v-if="item.team[2].attackFlag">
+                  <img src="../assets/videoPage/video3/icon-ack.png">
+                  {{item.team[2].attack}}
+                </span>
+                <img :src="item.team[2].leave">
               </div>
             </div>
             <div class="elf">
               <img :src="item.elf.path">
+              <span>
+                <img src="../assets/bossPage/star.png"
+                     v-for="i in item.elf.level">
+              </span>
             </div>
             <div class="score">
-              {{item.score}}
+              <span>
+                {{item.score}}
+              </span>
             </div>
             <div class="player">
-              {{item.player}}
+              <span>
+                {{item.player}}
+              </span>
             </div>
             <div class="time">
-              {{item.time}}
+              <span>
+                {{item.time}}
+              </span>
             </div>
           </li>
         </ul>
       </div>
     </div>
+    <!-- 截图容器与遮罩层 -->
     <div id="screenshot"
          v-show="screenshotCover">
       <span @click="closeCover">X</span>
@@ -213,6 +250,12 @@ export default {
       teamListIndex: 0,
       bossPath: {},
       selectBoss: {},
+      weather: "",
+      difficultyPath: [
+        require('../assets/videoPage/video3/icon-kt.png'),
+        require('../assets/videoPage/video3/icon-hl.png'),
+        require('../assets/videoPage/video3/icon-jm.png')
+      ],
       roleData: {},
       elfPath: {},
       teamList: [
@@ -223,7 +266,7 @@ export default {
             { name: "", path: "", leave: "", attack: "", attackFlag: false, tag: false },
             { name: "", path: "", leave: "", attack: "", attackFlag: false, tag: false },
           ],
-          elf: { name: "", path: "" },
+          elf: { name: "", path: "", level: "" },
           score: "",
           player: "",
           time: ""
@@ -235,7 +278,7 @@ export default {
             { name: "", path: "", leave: "", attack: "", attackFlag: false, tag: false },
             { name: "", path: "", leave: "", attack: "", attackFlag: false, tag: false },
           ],
-          elf: { name: "", path: "" },
+          elf: { name: "", path: "", level: "" },
           score: "",
           player: "",
           time: ""
@@ -246,7 +289,7 @@ export default {
             { name: "", path: "", leave: "", attack: "", attackFlag: false, tag: false },
             { name: "", path: "", leave: "", attack: "", attackFlag: false, tag: false },
           ],
-          elf: { name: "", path: "" },
+          elf: { name: "", path: "", level: "" },
           score: "",
           player: "",
           time: ""
@@ -257,7 +300,7 @@ export default {
             { name: "", path: "", leave: "", attack: "", attackFlag: false, tag: false },
             { name: "", path: "", leave: "", attack: "", attackFlag: false, tag: false },
           ],
-          elf: { name: "", path: "" },
+          elf: { name: "", path: "", level: "" },
           score: "",
           player: "",
           time: ""
@@ -268,7 +311,7 @@ export default {
             { name: "", path: "", leave: "", attack: "", attackFlag: false, tag: false },
             { name: "", path: "", leave: "", attack: "", attackFlag: false, tag: false },
           ],
-          elf: { name: "", path: "" },
+          elf: { name: "", path: "", level: "" },
           score: "",
           player: "",
           time: ""
@@ -303,11 +346,11 @@ export default {
       this.selectBoss = this.bossPath.paths[1];
     },
     )
-    $getJson('json/videoRole.json').then((result) => {
+    $getJson('json/video/videoRole.json').then((result) => {
       this.roleData = result.data;
     },
     )
-    $getJson('json/battleElf.json').then((result) => {
+    $getJson('json/video/videoMiniElf.json').then((result) => {
       this.elfPath = result.data.elf;
     },
     )
@@ -325,6 +368,10 @@ export default {
   height: 1080px;
   background-image: url("../assets/videoPage/video3/3-team-bg.jpg");
   background-repeat: no-repeat;
+  color: #ffffff;
+  font-weight: 600;
+  font-style: italic;
+
   > ul {
     position: absolute;
     top: 215px;
@@ -337,51 +384,57 @@ export default {
       background-image: url("../assets/videoPage/video3/3-team-list-split.png");
       > div {
         position: absolute;
-        top: 0;
-        height: 100%;
       }
     }
   }
 }
-.bossImg {
-  height: 90%;
+.boss {
+  height: 100%;
+  > .bossImg {
+    height: 90%;
+  }
+  > span {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.521);
+    text-align: center;
+    font-size: 24px;
+  }
 }
+
 .teamRole {
   left: 340px;
+  top: 0;
+  height: 100%;
   > div {
     position: absolute;
     box-sizing: content-box;
     padding-top: 10px;
-    width: 150px;
+    width: 180px;
     height: 112px;
     border-radius: 10px;
-    transform: skewX(-17deg);
-    overflow: hidden;
-    > div {
-      position: absolute;
-      left: -15px;
-      transform: skewX(17deg);
 
-      > img:nth-child(1) {
-        width: 180px;
-      }
-      > img:nth-child(3) {
-        position: absolute;
-        right: 25px;
-        bottom: 0;
-        width: 60px;
-      }
-      > span {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        color: rgb(255, 255, 255);
-        font-size: 16px;
-        font-weight: 700;
-        padding-left: 5px;
-        background-color: rgba(61, 61, 61, 0.541);
-      }
+    > img:nth-child(1) {
+      width: 180px;
+    }
+    > img:nth-child(3) {
+      position: absolute;
+      right: 10px;
+      bottom: -10px;
+      width: 60px;
+    }
+    > span {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 140px;
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+      font-weight: 700;
+      padding-left: 5px;
+      background-color: rgba(61, 61, 61, 0.541);
     }
   }
   > div:nth-child(2) {
@@ -390,5 +443,40 @@ export default {
   > div:nth-child(3) {
     left: 350px;
   }
+}
+.elf {
+  top: 10px;
+  left: 925px;
+  > span {
+    display: flex;
+    position: absolute;
+    left: -8px;
+    bottom: -28px;
+    width: 120px;
+    justify-content: center;
+    > img {
+      width: 30px;
+    }
+  }
+}
+.score,
+.player,
+.time {
+  display: flex;
+  justify-content: center;
+  top: 40px;
+  width: 270px;
+  font-size: 40px;
+}
+.score {
+  right: 550px;
+}
+.player {
+  right: 290px;
+  width: 260px;
+}
+.time {
+  width: 250px;
+  right: 40px;
 }
 </style>
