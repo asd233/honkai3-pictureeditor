@@ -97,15 +97,15 @@
           </p>
           <select class="form-control"
                   v-model="teamList[teamListIndex].team[memberIndex].leave">
-            <option value="video/level/s.png">S</option>
-            <option value="video/level/s1.png">S1</option>
-            <option value="video/level/s2.png">S2</option>
-            <option value="video/level/s3.png">S3</option>
-            <option value="video/level/ss.png">SS</option>
-            <option value="video/level/ss1.png">SS1</option>
-            <option value="video/level/ss2.png">SS2</option>
-            <option value="video/level/ss3.png">SS3</option>
-            <option value="video/level/sss.png">SSS</option>
+            <option value="static/video/level/s.png">S</option>
+            <option value="static/video/level/s1.png">S1</option>
+            <option value="static/video/level/s2.png">S2</option>
+            <option value="static/video/level/s3.png">S3</option>
+            <option value="static/video/level/ss.png">SS</option>
+            <option value="static/video/level/ss1.png">SS1</option>
+            <option value="static/video/level/ss2.png">SS2</option>
+            <option value="static/video/level/ss3.png">SS3</option>
+            <option value="static/video/level/sss.png">SSS</option>
           </select>
         </div>
       </div>
@@ -329,7 +329,7 @@ export default {
     },
     createImage() {
       // 调用插件生成view部分的截图
-      this.$utils.cerateImage("videoCoverPageImg", "screenshot", "VideoCover1");
+      this.$utils.cerateImage("videoCoverPageImg", "screenshot", "VideoCover3");
       this.screenshotCover = true;
     },
     closeCover() {
@@ -346,11 +346,11 @@ export default {
       this.selectBoss = this.bossPath.paths[1];
     },
     )
-    $getJson('json/video/videoRole.json').then((result) => {
+    $getJson('json//video/videoRole.json').then((result) => {
       this.roleData = result.data;
     },
     )
-    $getJson('json/video/videoMiniElf.json').then((result) => {
+    $getJson('json//video/videoMiniElf.json').then((result) => {
       this.elfPath = result.data.elf;
     },
     )

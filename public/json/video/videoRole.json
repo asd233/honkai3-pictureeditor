@@ -5,39 +5,39 @@
             "roleList": [
                 {
                     "name": "彗星",
-                    "path": "static/rolePicture/Bronya/huixing.png"
+                    "path": "static/video/role/Bronya/huixing.png"
                 },
                 {
                     "name": "骇兔",
-                    "path": "static/rolePicture/Bronya/haitu.png"
+                    "path": "static/video/role/Bronya/haitu.png"
                 },
                 {
                     "name": "理之律者",
-                    "path": "static/rolePicture/Bronya/lizhilvzhe.png"
+                    "path": "static/video/role/Bronya/lilu.png"
                 },
                 {
                     "name": "黑核",
-                    "path": "static/rolePicture/Bronya/heihe.png"
+                    "path": "static/video/role/Bronya/heihe.png"
                 },
                 {
                     "name": "次元",
-                    "path": "static/rolePicture/Bronya/ciyuan.png"
+                    "path": "static/video/role/Bronya/ciyuan.png"
                 },
                 {
                     "name": "银狼",
-                    "path": "static/rolePicture/Bronya/yinlang.png"
+                    "path": "static/video/role/Bronya/yinlang.png"
                 },
                 {
                     "name": "战车",
-                    "path": "static/rolePicture/Bronya/zhanche.png"
+                    "path": "static/video/role/Bronya/zhanche.png"
                 },
                 {
                     "name": "山吹",
-                    "path": "static/rolePicture/Bronya/shanchui.png"
+                    "path": "static/video/role/Bronya/shanchui.png"
                 },
                 {
                     "name": "雪地",
-                    "path": "static/rolePicture/Bronya/xuedi.png"
+                    "path": "static/video/role/Bronya/xuedi.png"
                 }
             ]
         },
@@ -46,15 +46,15 @@
             "roleList": [
                 {
                     "name": "荣光",
-                    "path": "static/rolePicture/Durandal/rongguang.png"
+                    "path": "static/video/role/Durandal/rongguang.png"
                 },
                 {
                     "name": "星猫",
-                    "path": "static/rolePicture/Durandal/xingmao.png"
+                    "path": "static/video/role/Durandal/xingmao.png"
                 },
                 {
                     "name": "月魄",
-                    "path": "static/rolePicture/Durandal/yuepo.png"
+                    "path": "static/video/role/Durandal/yuepo.png"
                 }
             ]
         },
@@ -63,7 +63,7 @@
             "roleList": [
                 {
                     "name": "粉色妖精小姐",
-                    "path": "static/rolePicture/Elysia/pinkElf.png"
+                    "path": "static/video/role/Elysia/pinkElf.png"
                 }
             ]
         },
@@ -72,7 +72,7 @@
             "roleList": [
                 {
                     "name": "皇女",
-                    "path": "static/rolePicture/Fischl/princess.png"
+                    "path": "static/video/role/Fischl/princess.png"
                 }
             ]
         },
@@ -81,31 +81,31 @@
             "roleList": [
                 {
                     "name": "白夜",
-                    "path": "static/rolePicture/Fuka/baiye.png"
+                    "path": "static/video/role/Fuka/baiye.png"
                 },
                 {
                     "name": "炽翎",
-                    "path": "static/rolePicture/Fuka/chiling.png"
+                    "path": "static/video/role/Fuka/chiling.png"
                 },
                 {
                     "name": "识律",
-                    "path": "static/rolePicture/Fuka/shilv.png"
+                    "path": "static/video/role/Fuka/shilu.png"
                 },
                 {
                     "name": "雾都",
-                    "path": "static/rolePicture/Fuka/wudu.png"
+                    "path": "static/video/role/Fuka/wudu.png"
                 },
                 {
                     "name": "迅羽",
-                    "path": "static/rolePicture/Fuka/xunyu.png"
+                    "path": "static/video/role/Fuka/xunyu.png"
                 },
                 {
                     "name": "云墨",
-                    "path": "static/rolePicture/Fuka/yunmo.png"
+                    "path": "static/video/role/Fuka/yunmo.png"
                 },
                 {
                     "name": "月轮",
-                    "path": "static/rolePicture/Fuka/yuelun.png"
+                    "path": "static/video/role/Fuka/yuelun.png"
                 }
             ]
         },
@@ -114,27 +114,27 @@
             "roleList": [
                 {
                     "name": "极地",
-                    "path": "static/rolePicture/Himeko/jidi.png"
+                    "path": "static/video/role/Himeko/jidi.png"
                 },
                 {
                     "name": "疾风",
-                    "path": "static/rolePicture/Himeko/jifeng.png"
+                    "path": "static/video/role/Himeko/jifeng.png"
                 },
                 {
                     "name": "凯旋",
-                    "path": "static/rolePicture/Himeko/kaixuan.png"
+                    "path": "static/video/role/Himeko/kaixuan.png"
                 },
                 {
                     "name": "玫瑰",
-                    "path": "static/rolePicture/Himeko/Rose.png"
+                    "path": "static/video/role/Himeko/meigui.png"
                 },
                 {
                     "name": "深红",
-                    "path": "static/rolePicture/Himeko/shenhong.png"
+                    "path": "static/video/role/Himeko/shenhong.png"
                 },
                 {
                     "name": "真红",
-                    "path": "static/rolePicture/Himeko/zhenhong.png"
+                    "path": "static/video/role/Himeko/zhenhong.png"
                 }
             ]
         },
@@ -143,15 +143,15 @@
             "roleList": [
                 {
                     "name": "第六夜",
-                    "path": "static/rolePicture/Kallen/diliuye.png"
+                    "path": "static/video/role/Kallen/diliuye.png"
                 },
                 {
                     "name": "今样",
-                    "path": "static/rolePicture/Kallen/jinyang.png"
+                    "path": "static/video/role/Kallen/jinyang.png"
                 },
                 {
                     "name": "原罪",
-                    "path": "static/rolePicture/Kallen/yuanzui.png"
+                    "path": "static/video/role/Kallen/yuanzui.png"
                 }
             ]
         },
@@ -159,32 +159,32 @@
             "roleName": "琪亚娜",
             "roleList": [
                 {
-                    "name": "领域装·白给",
-                    "path": "static/rolePicture/Kiana/bailian.png"
+                    "name": "领域装·白练",
+                    "path": "static/video/role/Kiana/bailian.png"
                 },
                 {
                     "name": "空律",
-                    "path": "static/rolePicture/Kiana/konglv.png"
+                    "path": "static/video/role/Kiana/konglu.png"
                 },
                 {
                     "name": "圣女",
-                    "path": "static/rolePicture/Kiana/shengnv.png"
+                    "path": "static/video/role/Kiana/shengnu.png"
                 },
                 {
                     "name": "天穹游侠",
-                    "path": "static/rolePicture/Kiana/tianqiong.png"
+                    "path": "static/video/role/Kiana/tianqiong.png"
                 },
                 {
                     "name": "炎律",
-                    "path": "static/rolePicture/Kiana/yanlv.png"
+                    "path": "static/video/role/Kiana/yanlu.png"
                 },
                 {
                     "name": "游侠",
-                    "path": "static/rolePicture/Kiana/youxia.png"
+                    "path": "static/video/role/Kiana/youxia.png"
                 },
                 {
                     "name": "月光",
-                    "path": "static/rolePicture/Kiana/yueguang.png"
+                    "path": "static/video/role/Kiana/yueguang.png"
                 }
             ]
         },
@@ -193,31 +193,31 @@
             "roleList": [
                 {
                     "name": "断罪鹦鹉",
-                    "path": "static/rolePicture/Mei/duanzui.png"
+                    "path": "static/video/role/Mei/duanzui.png"
                 },
                 {
                     "name": "绯红",
-                    "path": "static/rolePicture/Mei/feihong.png"
+                    "path": "static/video/role/Mei/feihong.png"
                 },
                 {
                     "name": "鬼铠",
-                    "path": "static/rolePicture/Mei/guikai.png"
+                    "path": "static/video/role/Mei/guikai.png"
                 },
                 {
                     "name": "雷律",
-                    "path": "static/rolePicture/Mei/leilv.png"
+                    "path": "static/video/role/Mei/leilu.png"
                 },
                 {
                     "name": "破晓",
-                    "path": "static/rolePicture/Mei/poxiao.png"
+                    "path": "static/video/role/Mei/poxiao.png"
                 },
                 {
                     "name": "强无敌",
-                    "path": "static/rolePicture/Mei/qiangxi.png"
+                    "path": "static/video/role/Mei/qiangxi.png"
                 },
                 {
                     "name": "鹦鹉",
-                    "path": "static/rolePicture/Mei/yingwu.png"
+                    "path": "static/video/role/Mei/yingwu.png"
                 }
             ]
         },
@@ -225,16 +225,20 @@
             "roleName": "丽塔",
             "roleList": [
                 {
+                    "name": "失落迷迭",
+                    "path": "static/video/role/Rita/midie.png"
+                },
+                {
                     "name": "黯蔷薇",
-                    "path": "static/rolePicture/Rita/qiangwei.png"
+                    "path": "static/video/role/Rita/qiangwei.png"
                 },
                 {
                     "name": "影铁",
-                    "path": "static/rolePicture/Rita/yingtie.png"
+                    "path": "static/video/role/Rita/yingtie.png"
                 },
                 {
                     "name": "冰箱的主人",
-                    "path": "static/rolePicture/Rita/yuehun.png"
+                    "path": "static/video/role/Rita/yuehun.png"
                 }
             ]
         },
@@ -243,19 +247,19 @@
             "roleList": [
                 {
                     "name": "巫女",
-                    "path": "static/rolePicture/Sakura/wunv.png"
+                    "path": "static/video/role/Sakura/wunu.png"
                 },
                 {
                     "name": "勿忘",
-                    "path": "static/rolePicture/Sakura/wuwang.png"
+                    "path": "static/video/role/Sakura/wuwang.png"
                 },
                 {
                     "name": "真炎幸魂",
-                    "path": "static/rolePicture/Sakura/zhenyan.png"
+                    "path": "static/video/role/Sakura/zhenyan.png"
                 },
                 {
                     "name": "夜隐重霞",
-                    "path": "static/rolePicture/Sakura/xia.png"
+                    "path": "static/video/role/Sakura/xia.png"
                 }
             ]
         },
@@ -264,15 +268,15 @@
             "roleList": [
                 {
                     "name": "彼岸",
-                    "path": "static/rolePicture/Seele/bian.png"
+                    "path": "static/video/role/Seele/bian.png"
                 },
                 {
                     "name": "幻海梦蝶",
-                    "path": "static/rolePicture/Seele/huanhai.png"
+                    "path": "static/video/role/Seele/huanhai.png"
                 },
                 {
                     "name": "魇夜星渊",
-                    "path": "static/rolePicture/Seele/yanye.png"
+                    "path": "static/video/role/Seele/yanye.png"
                 }
             ]
         },
@@ -281,31 +285,31 @@
             "roleList": [
                 {
                     "name": "圣贤王·观星",
-                    "path": "static/rolePicture/Theresa/guanxing.png"
+                    "path": "static/video/role/Theresa/guanxing.png"
                 },
                 {
                     "name": "神恩颂歌",
-                    "path": "static/rolePicture/Theresa/shenen.png"
+                    "path": "static/video/role/Theresa/shenen.png"
                 },
                 {
                     "name": "誓约",
-                    "path": "static/rolePicture/Theresa/shiyue.png"
+                    "path": "static/video/role/Theresa/shiyue.png"
                 },
                 {
                     "name": "樱火轮舞",
-                    "path": "static/rolePicture/Theresa/yinghuo.png"
+                    "path": "static/video/role/Theresa/yinghuo.png"
                 },
                 {
                     "name": "暮光骑士·月煌",
-                    "path": "static/rolePicture/Theresa/yuehuang.png"
+                    "path": "static/video/role/Theresa/yuehuang.png"
                 },
                 {
                     "name": "月下",
-                    "path": "static/rolePicture/Theresa/yuexia.png"
+                    "path": "static/video/role/Theresa/yuexia.png"
                 },
                 {
                     "name": "紫苑",
-                    "path": "static/rolePicture/Theresa/ziyuan.png"
+                    "path": "static/video/role/Theresa/ziyuan.png"
                 }
             ]
         },
@@ -314,15 +318,15 @@
             "roleList": [
                 {
                     "name": "狂热蓝调",
-                    "path": "static/rolePicture/Vodga/kuangre.png"
+                    "path": "static/video/role/Vodga/kuangre.png"
                 },
                 {
                     "name": "樱桃炸弹",
-                    "path": "static/rolePicture/Vodga/yingtao.png"
+                    "path": "static/video/role/Vodga/yingtao.png"
                 },
                 {
                     "name": "蓝莓特攻",
-                    "path": "static/rolePicture/Vodga/lanmei.png"
+                    "path": "static/video/role/Vodga/lanmei.png"
                 }
             ]
         }

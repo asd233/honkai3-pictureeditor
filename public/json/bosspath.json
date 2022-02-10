@@ -2,107 +2,107 @@
     "paths": [
         {
             "bossName": "支配之律者-乌合之众",
-            "path": "bossPicture/a96ceae2e94.png"
+            "path": "static/bossPicture/a96ceae2e94.png"
         },
         {
             "bossName": "MHT-3B 天堂使者",
-            "path": "bossPicture/107c4df0d95.png"
+            "path": "static/bossPicture/107c4df0d95.png"
         },
         {
             "bossName": "奔狼的领主",
-            "path": "bossPicture/9afdef259ae.png"
+            "path": "static/bossPicture/9afdef259ae.png"
         },
         {
             "bossName": "八重霞",
-            "path": "bossPicture/32e3465f259.png"
+            "path": "static/bossPicture/32e3465f259.png"
         },
         {
             "bossName": "科亚特尔-复生之影",
-            "path": "bossPicture/27d799806d8.png"
+            "path": "static/bossPicture/27d799806d8.png"
         },
         {
             "bossName": "陨冰之律者",
-            "path": "bossPicture/9fc53459571.png"
+            "path": "static/bossPicture/9fc53459571.png"
         },
         {
             "bossName": "祸斗",
-            "path": "bossPicture/5f955596eff.png"
+            "path": "static/bossPicture/5f955596eff.png"
         },
         {
             "bossName": "辉骑士·月魄",
-            "path": "bossPicture/255e513ff45.png"
+            "path": "static/bossPicture/255e513ff45.png"
         },
         {
             "bossName": "托纳提乌·噬日之影",
-            "path": "bossPicture/405aafdb185.png"
+            "path": "static/bossPicture/405aafdb185.png"
         },
         {
             "bossName": "吼姆王",
-            "path": "bossPicture/4d519ef22b5.png"
+            "path": "static/bossPicture/4d519ef22b5.png"
         },
         {
             "bossName": "卡莲",
-            "path": "bossPicture/f6fe06008fe.png"
+            "path": "static/bossPicture/f6fe06008fe.png"
         },
         {
             "bossName": "绯狱丸",
-            "path": "bossPicture/8b8ac101257.png"
+            "path": "static/bossPicture/8b8ac101257.png"
         },
         {
             "bossName": "海姆达尔",
-            "path": "bossPicture/bb7eb6ce47d.png"
+            "path": "static/bossPicture/bb7eb6ce47d.png"
         },
         {
             "bossName": "湮灭沉灵",
-            "path": "bossPicture/f7c91ebd2be.png"
+            "path": "static/bossPicture/f7c91ebd2be.png"
         },
         {
             "bossName": "苍骑士·月魂",
-            "path": "bossPicture/35f412ea045.png"
+            "path": "static/bossPicture/35f412ea045.png"
         },
         {
             "bossName": "教父军团",
-            "path": "bossPicture/097aae13191.png"
+            "path": "static/bossPicture/097aae13191.png"
         },
         {
             "bossName": "特里波卡",
-            "path": "bossPicture/08e2e263191.png"
+            "path": "static/bossPicture/08e2e263191.png"
         },
         {
             "bossName": "贝纳勒斯",
-            "path": "bossPicture/64022c560e1.png"
+            "path": "static/bossPicture/64022c560e1.png"
         },
         {
             "bossName": "姬麟·黑",
-            "path": "bossPicture/10889b04305.png"
+            "path": "static/bossPicture/10889b04305.png"
         },
         {
             "bossName": "空之律者",
-            "path": "bossPicture/1719392646a.png"
+            "path": "static/bossPicture/1719392646a.png"
         },
         {
             "bossName": "MHT-3和平使者",
-            "path": "bossPicture/057696404c3.png"
+            "path": "static/bossPicture/057696404c3.png"
         },
         {
             "bossName": "阿湿波",
-            "path": "bossPicture/f6488ba6170.png"
+            "path": "static/bossPicture/f6488ba6170.png"
         },
         {
             "bossName": "地藏御魂",
-            "path": "bossPicture/7941ecde49c.png"
+            "path": "static/bossPicture/7941ecde49c.png"
         },
         {
             "bossName": "赫菲斯托斯",
-            "path": "bossPicture/02006eaedc9.png"
+            "path": "static/bossPicture/02006eaedc9.png"
         },
         {
             "bossName": "影骑士·月轮",
-            "path": "bossPicture/be31647308c.png"
+            "path": "static/bossPicture/be31647308c.png"
         },
         {
             "bossName": "帕凡提",
-            "path": "bossPicture/6f317b82dab.png"
+            "path": "static/bossPicture/6f317b82dab.png"
         }
     ]
 }

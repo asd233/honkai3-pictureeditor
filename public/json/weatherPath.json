@@ -2,39 +2,39 @@
     "weather": [
         {
             "weather": "惧冰",
-            "path": "weather/jubing.png"
+            "path": "static/weather/jubing.png"
         },
         {
             "weather": "狙击",
-            "path": "weather/juji.png"
+            "path": "static/weather/juji.png"
         },
         {
             "weather": "恐雷",
-            "path": "weather/konglei.png"
+            "path": "static/weather/konglei.png"
         },
         {
             "weather": "雷劫",
-            "path": "weather/leijie.png"
+            "path": "static/weather/leijie.png"
         },
         {
             "weather": "量子",
-            "path": "weather/liangzi.png"
+            "path": "static/weather/liangzi.png"
         },
         {
             "weather": "怯火",
-            "path": "weather/qiehuo.png"
+            "path": "static/weather/qiehuo.png"
         },
         {
             "weather": "天敌",
-            "path": "weather/tiandi.png"
+            "path": "static/weather/tiandi.png"
         },
         {
             "weather": "畏血",
-            "path": "weather/weixue.png"
+            "path": "static/weather/weixue.png"
         },
         {
             "weather": "战意",
-            "path": "weather/zhanyi.png"
+            "path": "static/weather/zhanyi.png"
         }
     ]
 }
