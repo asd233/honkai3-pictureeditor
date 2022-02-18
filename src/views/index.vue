@@ -17,6 +17,9 @@
       <p>
         <router-link to="/videoCover3">视频素材-封面3</router-link>
       </p>
+      <p>
+        <router-link to="/videoCover4">视频素材-封面4</router-link>
+      </p>
       <div id="author">
         <a href="https://github.com/asd233/honkai3-pictureeditor">
           <img src="https://avatars.githubusercontent.com/u/38546775?s=48&v=4">

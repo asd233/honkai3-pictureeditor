@@ -6,6 +6,8 @@ import Team from "../views/Team.vue"
 import videoCover1 from "../views/VideoCover1.vue"
 import videoCover2 from "../views/VideoCover2.vue"
 import videoCover3 from "../views/VideoCover3.vue"
+import videoCover4 from "../views/VideoCover4.vue"
+
 
 Vue.use(VueRouter)
 
@@ -39,6 +41,11 @@ const routes = [
         path: "/videoCover3",
         name: "videoCover3",
         component: videoCover3
+    },
+    {
+        path: "/videoCover4",
+        name: "videoCover4",
+        component: videoCover4
     }
 ]
 
