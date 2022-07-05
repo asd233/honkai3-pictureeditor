@@ -1,0 +1,40 @@
+{
+    "weather": [
+        {
+            "weather": "惧冰",
+            "path": "static/weather/jubing.png"
+        },
+        {
+            "weather": "狙击",
+            "path": "static/weather/juji.png"
+        },
+        {
+            "weather": "恐雷",
+            "path": "static/weather/konglei.png"
+        },
+        {
+            "weather": "雷劫",
+            "path": "static/weather/leijie.png"
+        },
+        {
+            "weather": "量子",
+            "path": "static/weather/liangzi.png"
+        },
+        {
+            "weather": "怯火",
+            "path": "static/weather/qiehuo.png"
+        },
+        {
+            "weather": "天敌",
+            "path": "static/weather/tiandi.png"
+        },
+        {
+            "weather": "畏血",
+            "path": "static/weather/weixue.png"
+        },
+        {
+            "weather": "战意",
+            "path": "static/weather/zhanyi.png"
+        }
+    ]
+}

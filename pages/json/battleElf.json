@@ -1,0 +1,36 @@
+{
+    "elf": [
+        {
+            "name": "赤鸢之翼",
+            "path": "static/battleElf/Jingwei‘sWings.png"
+        },
+        {
+            "name": "仿犹大",
+            "path": "static/battleElf/BloodEmbrace.png"
+        },
+        {
+            "name": "苍玄之书",
+            "path": "static/battleElf/BookofFuxi.png"
+        },
+        {
+            "name": "晓月镇魂歌",
+            "path": "static/battleElf/Selune‘sElegy.png"
+        },
+        {
+            "name": "贝拉",
+            "path": "static/battleElf/Bella.png"
+        },
+        {
+            "name": "龙虾博士Zero",
+            "path": "static/battleElf/TeslaZero.png"
+        },
+        {
+            "name": "若水",
+            "path": "static/battleElf/Water‘sEdge.png"
+        },
+        {
+            "name": "西琳",
+            "path": "static/battleElf/Shirin.png"
+        }
+    ]
+}
